@@ -328,7 +328,7 @@ body {
 }
 .story-image img { /* imagen*/
   /* Asegura que la imagen se superponga al cuadro de acento */
-  width: 80%; 
+  width: 95%; 
   position: relative;
   z-index: 1;
   filter: grayscale(0.5);
@@ -398,10 +398,11 @@ body {
 }
 
 /* --- RESPONSIVE STORY --- */
-@media (min-width: 692px) {
+@media (min-width: 792px) {
   .story-container {
     grid-template-columns: 1fr 1fr;
   }
+ 
   .product-card {
     min-width: 400px;
   }
