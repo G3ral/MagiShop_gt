@@ -1,16 +1,16 @@
-/* VARIABLES DE DISEÃ‘O (Basadas en tu paleta original) */
+/* VARIABLES DE DISEÑO (Basadas en tu paleta original) */
 :root {
-  --primary: #5e5e5e;
-  --background: #fcf9f8;
+  --primary: #7c7c7c;
+  --background: #eaebed;
   --surface: #ffffff;
-  --text-main: #1c1b1b;
+  --text-main: #1e1d1d;
   --text-muted: #70585b;
   --font-headline: "Noto Serif", serif;
   --font-body: "Manrope", sans-serif;
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* RESET BÃSICO */
+/* RESET BÁSICO */
 * {
   margin: 0;
   padding: 0;
@@ -23,12 +23,12 @@ body {
   line-height: 1.6;
 }
 
-/* NAVEGACIÃ“N RESPONSIVE */
+/* NAVEGACIÓN RESPONSIVE */
 .navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(240, 239, 244, 0.8);
   backdrop-filter: blur(15px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   padding: 1rem 5%;
@@ -107,6 +107,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: grayscale(0.1);
 }
 .hero-overlay {
   position: absolute;
@@ -119,7 +120,7 @@ body {
 .hero-text h1 {
   font-family: var(--font-headline);
   font-size: clamp(3rem, 10vw, 7rem);
-  color: white;
+  color: #fcfaf9;
   line-height: 0.9;
   margin-bottom: 30px;
 }
@@ -165,6 +166,7 @@ body {
   object-fit: cover;
   transition: var(--transition);
   margin-top: 33px;
+  filter: grayscale(0.2);
 }
 .bento-item:hover img {
   transform: scale(1.05);
@@ -174,10 +176,10 @@ body {
   position: absolute;
   bottom: 30px;
   left: 30px;
-  color: white;
+  color: rgba(185, 49, 79, 0.9);
 }
 .link-line {
-  color: white;
+  color: rgba(185, 49, 79, 0.9);
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 700;
@@ -301,9 +303,9 @@ body {
 .story-section {
   padding: 100px 5%;
   background: var(--background);
-
 }
-.story-container {/* Contenedor principal con grid para imagen y texto */
+.story-container {
+  /* Contenedor principal con grid para imagen y texto */
   max-width: auto;
   margin: 0 auto;
   display: grid;
@@ -314,7 +316,8 @@ body {
 .story-image {
   position: relative;
 }
-.accent-box {/* Cuadro de acento detrÃ¡s de la imagen */
+.accent-box {
+  /* Cuadro de acento detrás de la imagen */
   position: absolute;
   top: -10px;
   left: -20px;
@@ -323,8 +326,9 @@ body {
   background: #debfc2;
   z-index: 0;
 }
-.story-image img {/* Asegura que la imagen se superponga al cuadro de acento */
-  width: 100%;
+.story-image img { /* imagen*/
+  /* Asegura que la imagen se superponga al cuadro de acento */
+  width: 80%; 
   position: relative;
   z-index: 1;
   filter: grayscale(0.5);
