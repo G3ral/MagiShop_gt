@@ -1,5 +1,5 @@
 /* VARIABLES DE DISEÑO (Basadas en tu paleta original) */
-:root {
+:root {/* Colores y tipografías principales  */
   --primary: #7c7c7c;
   --background: #eaebed;
   --surface: #ffffff;
@@ -11,12 +11,13 @@
 }
 
 /* RESET BÁSICO */
+/* Elimina márgenes y rellenos por defecto, y establece un box-sizing consistente */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
+body {/* Estilos base para el cuerpo del documento */
   background-color: var(--background);
   color: var(--text-main);
   font-family: var(--font-body);
@@ -24,30 +25,31 @@ body {
 }
 
 /* NAVEGACIÓN RESPONSIVE */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(240, 239, 244, 0.8);
-  backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 1rem 5%;
+.navbar {/* Barra de navegación con fondo translúcido y efecto blur */
+  position: sticky;/* Permanece visible al hacer scroll */
+  top: 0;/* Se adhiere a la parte superior de la ventana */
+  z-index: 1000;/* Asegura que esté por encima de otros elementos */
+  background: rgba(240, 239, 244, 0.8);/* Fondo translúcido */
+backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);/* Línea sutil en la parte inferior */
+  padding: 1rem 5%;/* Espaciado interno para separar el contenido del borde */
 }
-
+/* Contenedor principal de la navegación, centrado y con espacio entre elementos */
 .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
+  display: flex;/* Utiliza Flexbox para organizar los elementos de navegación */
+  justify-content: space-between;/* Distribuye el espacio entre los elementos, dejando el máximo espacio posible entre ellos */
+  align-items: center;/* Alinea verticalmente los elementos en el centro */
+  max-width: 1400px;/* Limita el ancho máximo del contenedor para mantener un diseño limpio en pantallas grandes */
+  margin: 0 auto;/* Centra el contenedor horizontalmente dentro de la ventana */
 }
 
+/* Área del logo, con espacio entre el logo y el título de la marca */
 .logo-area {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  display: flex;/* Utiliza Flexbox para organizar el logo y el título de la marca */
+  align-items: center;/* Alinea verticalmente el logo y el título en el centro */
+  gap: 15px;/* Espacio entre el logo y el título de la marca */
 }
-.logo-box {
+.logo-box {/* Contenedor del logo, con tamaño fijo y forma circular */
   width: 40px;
   height: 40px;
   overflow: hidden;
