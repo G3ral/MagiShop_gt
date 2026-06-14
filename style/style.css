@@ -1,5 +1,6 @@
 /* VARIABLES DE DISEÑO (Basadas en tu paleta original) */
-:root {/* Colores y tipografías principales  */
+:root {
+  /* Colores y tipografías principales  */
   --primary: #7c7c7c;
   --background: #eaebed;
   --surface: #ffffff;
@@ -11,13 +12,12 @@
 }
 
 /* RESET BÁSICO */
-/* Elimina márgenes y rellenos por defecto, y establece un box-sizing consistente */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {/* Estilos base para el cuerpo del documento */
+body {
   background-color: var(--background);
   color: var(--text-main);
   font-family: var(--font-body);
@@ -25,31 +25,28 @@ body {/* Estilos base para el cuerpo del documento */
 }
 
 /* NAVEGACIÓN RESPONSIVE */
-.navbar {/* Barra de navegación con fondo translúcido y efecto blur */
-  position: sticky;/* Permanece visible al hacer scroll */
-  top: 0;/* Se adhiere a la parte superior de la ventana */
-  z-index: 1000;/* Asegura que esté por encima de otros elementos */
-  background: rgba(240, 239, 244, 0.8);/* Fondo translúcido */
-backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);/* Línea sutil en la parte inferior */
-  padding: 1rem 5%;/* Espaciado interno para separar el contenido del borde */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(240, 239, 244, 0.8);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1rem 5%;
 }
-/* Contenedor principal de la navegación, centrado y con espacio entre elementos */
 .nav-container {
-  display: flex;/* Utiliza Flexbox para organizar los elementos de navegación */
-  justify-content: space-between;/* Distribuye el espacio entre los elementos, dejando el máximo espacio posible entre ellos */
-  align-items: center;/* Alinea verticalmente los elementos en el centro */
-  max-width: 1400px;/* Limita el ancho máximo del contenedor para mantener un diseño limpio en pantallas grandes */
-  margin: 0 auto;/* Centra el contenedor horizontalmente dentro de la ventana */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
-
-/* Área del logo, con espacio entre el logo y el título de la marca */
 .logo-area {
-  display: flex;/* Utiliza Flexbox para organizar el logo y el título de la marca */
-  align-items: center;/* Alinea verticalmente el logo y el título en el centro */
-  gap: 15px;/* Espacio entre el logo y el título de la marca */
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
-.logo-box {/* Contenedor del logo, con tamaño fijo y forma circular */
+.logo-box {
   width: 40px;
   height: 40px;
   overflow: hidden;
@@ -64,7 +61,6 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
   font-weight: 800;
   letter-spacing: 2px;
 }
-
 .nav-menu {
   display: flex;
   list-style: none;
@@ -82,7 +78,6 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
   color: var(--text-main);
   border-bottom: 1px solid var(--text-main);
 }
-
 .nav-icons {
   display: flex;
   gap: 20px;
@@ -96,7 +91,7 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
 }
 .menu-toggle {
   display: none;
-} /* Oculto en PC */
+}
 
 /* HERO SECTION */
 .hero {
@@ -139,30 +134,38 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
   letter-spacing: 2px;
   cursor: pointer;
   transition: var(--transition);
-  border-radius: 15%;
+  border-radius: 4px; /* Cambiado a un radio sutil de lujo en lugar de 15% */
 }
 .btn-primary:hover {
   background: #000;
 }
 
-/* BENTO GRID RESPONSIVE */
+/* BENTO GRID RESPONSIVE (Inicio / Categorías) */
 .section-container {
-  padding: 40px 5%;
-  max-width: 1400px;
-  margin: 0 auto;
+  padding: 40px 5%;/* Espaciado generoso para un diseño más aireado */
+  max-width: 1400px;/* Ancho máximo para mantener el contenido centrado y evitar que se extienda demasiado en pantallas grandes */
+  margin: 0 auto;/* Centra el contenido horizontalmente */
 }
 .bento-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 30px;/* Espacio entre filas para evitar que los elementos se vean amontonados */
 }
-
-.bento-item {
+.bento-item{
   position: relative;
   overflow: hidden;
   height: 400px;
   margin-top: 30px;
 }
+
+.bento-item{
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  margin-top: 30px;
+}
+
+
 .bento-item img {
   width: 100%;
   height: 100%;
@@ -175,7 +178,6 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
 .bento-item:hover img {
   transform: scale(1.05);
 }
-
 .bento-content {
   position: absolute;
   bottom: 30px;
@@ -190,9 +192,82 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
   letter-spacing: 1px;
 }
 
+/* ==========================================================================
+   NUEVA SECCIÓN DE FRAGANCIAS (Alineada con Captura de pantalla 2026-06-12)
+   ========================================================================== */
+.section-container-fragancias {
+  padding: 60px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
+/* Cuadrícula limpia y moderna sin carrusel */
+.bento-grid-fragancias {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 columna en teléfonos pequeños */
+  gap: 40px 30px; /* Separación vertical y horizontal espaciosa */
+}
 
-/* BENTO GRID RESPONSIVE joyas*/
+/* Tarjeta contenedora de cada producto */
+.product-grid-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Contenedor de imagen con fondo suave para resaltar el producto */
+.product-img-box {
+  background-color: #f3f4f6; /* Fondo gris claro limpio */
+  aspect-ratio: 3 / 4;      /* Proporción estilizada de catálogo de lujo */
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 15px;      /* Despega la imagen de los textos inferiores */
+}
+
+.product-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+/* Efecto sutil de zoom en la foto del producto */
+.product-grid-item:hover .product-img-box img {
+  transform: scale(1.03);
+}
+
+/* Contenedor de detalles: separa textos a la izquierda y precio a la derecha */
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 4px;
+}
+
+/* Título y descripción secundaria */
+.product-text h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+.product-text p {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Precio destacado a la derecha */
+.product-price {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-main);
+  white-space: nowrap; /* Evita que el precio se parta en dos líneas */
+}
+
+/* BENTO GRID RESPONSIVE joyas
 .section-container2 {
   padding: 40px 5%;
   max-width: 1400px;
@@ -203,7 +278,6 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
-
 .bento-item2 {
   position: relative;
   overflow: hidden;
@@ -222,7 +296,6 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
 .bento-item2:hover img {
   transform: scale(1.05);
 }
-
 .bento-content2 {
   position: absolute;
   bottom: 30px;
@@ -235,30 +308,70 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 1px;
+} */
+
+/* --- MEDIA QUERIES --- */
+
+/* Tablets medianas */
+@media (min-width: 768px) {
+  /* La sección de fragancias pasa a mostrar 2 columnas perfectamente ordenadas */
+  .bento-grid-fragancias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Pantallas grandes y Laptops */
+@media (min-width: 992px) {
+  .bento-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columnas iguales para un diseño más equilibrado */
+     gap: 30px; /* Aumenta el espacio entre columnas para un diseño más aireado */
+  }
+  .bento-stack {/* Cambia a flex para apilar los elementos verticalmente con espacio entre ellos */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;/* Espacio entre los elementos apilados para evitar que se vean amontonados */
+  }
+  .bento-item{
+    height: 45%;/* Reduce un poco la altura para dar más espacio a los textos y evitar que las imágenes se vean demasiado grandes en pantallas grandes */
+  }
+  /* En pantallas de escritorio, se activan las 3 columnas simétricas como en tu referencia */
+  .bento-grid-fragancias {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 35px;
+  }
 }
 
 
 
-
-
-/* --- MEDIA QUERIES (Paso a paso responsive) --- */
-
-/* Tablets y Laptops */
-@media (min-width: 768px) {
-  .bento-grid {
-    grid-template-columns: 1.2fr 0.8fr;
-  } /* Dos columnas */
-  .bento-stack {
+/*--------------------------------------------------------------------------------------------------------------*/
+@media (min-width: 992px) {
+  .bento-grid2 {
+    grid-template-columns: 1fr 1fr;/** 2 columnas con proporción 60/40 para un diseño más dinámico */
+  }
+  .bento-stack2 {
     display: flex;
     flex-direction: column;
     gap: 30px;
   }
-  .bento-item.large {
-    height: 100%;
+  .bento-item2 {
+    height: 85%;
   }
 }
 
-/* Celulares */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Celulares Menú */
 @media (max-width: 600px) {
   .nav-menu {
     position: fixed;
@@ -285,7 +398,7 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
 /* --- NEW ARRIVALS (SLIDER) --- */
 .arrivals-section {
   padding: 80px 5%;
-  background: var(--white);
+  background: var(--surface);
 }
 .section-header {
   display: flex;
@@ -305,7 +418,6 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
   font-family: var(--font-headline);
   font-size: clamp(2rem, 5vw, 3.5rem);
 }
-
 .product-slider {
   display: flex;
   gap: 30px;
@@ -315,8 +427,7 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
 }
 .product-slider::-webkit-scrollbar {
   display: none;
-} /* Oculta scroll visual */
-
+}
 .product-card {
   min-width: 300px;
   flex: 1;
@@ -336,7 +447,6 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
 .product-card:hover img {
   transform: scale(1.03);
 }
-
 .product-info {
   display: flex;
   justify-content: space-between;
@@ -360,11 +470,10 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
   background: var(--background);
 }
 .story-container {
-  /* Contenedor principal con grid para imagen y texto */
   max-width: auto;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr; /* Por defecto, una columna */
+  grid-template-columns: 1fr;
   gap: 30px;
   align-items: center;
 }
@@ -372,7 +481,6 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
   position: relative;
 }
 .accent-box {
-  /* Cuadro de acento detrás de la imagen */
   position: absolute;
   top: -10px;
   left: -20px;
@@ -382,9 +490,8 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
   z-index: 0;
   border-radius: 6px;
 }
-.story-image img { /* imagen*/
-  /* Asegura que la imagen se superponga al cuadro de acento */
-  width: 95%; 
+.story-image img {
+  width: 95%;
   position: relative;
   z-index: 1;
   filter: grayscale(0.5);
@@ -395,7 +502,6 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
   color: var(--text-muted);
   line-height: 1.8;
 }
-
 .read-more {
   text-decoration: none;
   color: var(--text-main);
@@ -454,12 +560,11 @@ backdrop-filter: blur(15px);/* Efecto de desenfoque para mejorar la legibilidad 
   cursor: pointer;
 }
 
-/* --- RESPONSIVE STORY --- */
+/* --- RESPONSIVE STORY & CARDS --- */
 @media (min-width: 792px) {
   .story-container {
     grid-template-columns: 1fr 1fr;
   }
- 
   .product-card {
     min-width: 400px;
   }
