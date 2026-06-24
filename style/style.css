@@ -11,6 +11,14 @@
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
+
+html {/* Habilita el desplazamiento suave para anclas internas */
+  scroll-behavior: smooth;/* Habilita el desplazamiento suave para anclas internas */
+  scroll-padding-top: 80px; /* Ajusta según la altura de tu navbar */
+}
+
+
 /* RESET BÁSICO */
 * {
   margin: 0;
@@ -125,19 +133,30 @@ body {
   font-style: italic;
   font-weight: 400;
 }
-.btn-primary {
+.btn-primary {/* Botón de llamada a la acción con estilo moderno y elegante */
+  display: inline-block;/* Asegura que el botón se comporte como un bloque en línea para poder aplicar padding y margin correctamente */
+  text-decoration: none;/* Elimina el subrayado predeterminado de los enlaces */
+  text-align: center;/* Centra el texto dentro del botón */
   background: var(--primary);
   color: #d4d4d4;
-  border: none;
-  padding: 15px 40px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  cursor: pointer;
-  transition: var(--transition);
-  border-radius: 4px; /* Cambiado a un radio sutil de lujo en lugar de 15% */
+  border: none;/* Elimina el borde predeterminado del botón */
+  padding: 15px 40px;/* Aumenta el padding para un botón más grande y llamativo */
+  font-weight: 700;/* Aumenta el peso de la fuente para que el texto del botón sea más prominente */
+  letter-spacing: 2px;/* Aumenta el espaciado entre letras para un efecto más elegante y moderno */
+  cursor: pointer;/* Cambia el cursor al pasar sobre el botón para indicar interactividad */
+  transition: var(--transition);/* Añade una transición suave para los cambios de estado del botón */
+  border-radius: 12px; /* Cambiado a un radio sutil de lujo en lugar de 15% */
 }
-.btn-primary:hover {
+
+/* --- ANIMACIONES DE INTERACCIÓN --- */
+
+/* Cuando el usuario pasa el cursor encima (Hover) */
+.btn-primary:hover {/* Efecto de hover para mejorar la experiencia del usuario y dar retroalimentación visual */
   background: #000;
+  /* transform: scale(1.05);Aumenta ligeramente el tamaño del botón para un efecto de "pop"   */
+  /* transform: translateY(-3px); */ /* Desplaza el botón hacia arriba para un efecto de elevación */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil para dar la sensación d
+  e que el botón está flotando */
 }
 
 /* BENTO GRID RESPONSIVE (Inicio / Categorías) */
