@@ -153,11 +153,18 @@ body {
 /* Cuando el usuario pasa el cursor encima (Hover) */
 .btn-primary:hover {/* Efecto de hover para mejorar la experiencia del usuario y dar retroalimentación visual */
   background: #000;
-  /* transform: scale(1.05);Aumenta ligeramente el tamaño del botón para un efecto de "pop"   */
+  transform: scale(1.05);/* Aumenta ligeramente el tamaño del botón para un efecto de "pop" */
   /* transform: translateY(-3px); */ /* Desplaza el botón hacia arriba para un efecto de elevación */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil para dar la sensación d
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); */ /* Añade una sombra sutil para dar la sensación d
   e que el botón está flotando */
 }
+
+.btn-primary:active {/* Efecto de clic para dar retroalimentación inmediata al usuario */
+  transform: translateY(3px) scale(0.98);/* Desplaza el botón hacia abajo para simular un efecto de "presión" */
+}
+
+
+
 
 /* BENTO GRID RESPONSIVE (Inicio / Categorías) */
 .section-container {
