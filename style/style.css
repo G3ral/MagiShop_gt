@@ -208,10 +208,11 @@ body {
   position: absolute;
   bottom: 30px;
   left: 30px;
-  color: rgba(185, 49, 79, 0.9);
+  /* color: rgba(163, 163, 128); */
+  color: rgba(76, 91, 92);
 }
 .link-line {
-  color: rgba(185, 49, 79, 0.9);
+  color: rgba(76, 91, 92);
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 700;
@@ -383,14 +384,6 @@ body {
     height: 85%;
   }
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -579,6 +572,14 @@ body {
   border: none;
   flex: 1;
   outline: none;
+}
+
+/* Footer Bottom propuesta si se queda este*/
+.footer-bottom {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
 
 /* --- RESPONSIVE STORY & CARDS --- */

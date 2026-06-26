@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {// Control del menú hamburguesa 
   const mobileBtn = document.getElementById("mobile-btn");// El menú de navegación que se muestra/oculta
   const navMenu = document.getElementById("nav-menu");// El icono dentro del botón de menú (para cambiar entre "menu" y "close")
