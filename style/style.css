@@ -483,6 +483,16 @@ body {
   font-weight: 600;
 }
 
+/*ocultar flechas del slider en pantallas pequeñas*/
+@media (max-width: 768px) {
+  .scroll-controls {
+    display: none;
+  }
+}
+
+
+
+
 /* --- STORY SECTION --- */
 .story-section {
   padding: 100px 5%;
