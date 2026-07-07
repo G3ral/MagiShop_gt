@@ -443,6 +443,7 @@ body {
   overflow-x: auto;
   scroll-behavior: smooth;
   padding-bottom: 20px;
+  
 }
 .product-slider::-webkit-scrollbar {
   display: none;
@@ -600,4 +601,18 @@ body {
   .product-card {
     min-width: 400px;
   }
+}
+
+
+                  /* --- ANIMACIÓN DE CARGA DE IMÁGENES (Lazy Loading) --- */
+/* Estado inicial: la imagen está oculta y un poco abajo */
+.lazy-img {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+/* Estado final: cuando el usuario llega a ella, se hace visible y sube a su posición real */
+.lazy-img.loaded {
+  opacity: 1;
+  transform: translateY(0);
 }

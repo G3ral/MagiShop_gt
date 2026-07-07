@@ -37,3 +37,38 @@ nextBtn.addEventListener("click", () => {// Agrega un evento de click al botón 
 prevBtn.addEventListener("click", () => {// Agrega un evento de click al botón "prev" para desplazar el slider hacia la izquierda cuando se hace click en el botón "prev", el slider se desplazará horizontalmente hacia la izquierda para mostrar los productos anteriores disponibles en el slider, permitiendo al usuario navegar a través de los productos de manera fácil y rápida 
   slider.scrollLeft -= 350; // Desplaza a la izquierda 
 });
+
+
+// Control de Lazy Loading de Imágenes-----------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+  // 1. Buscamos todas las imágenes que tengan la clase 'lazy-img'
+  const lazyImages = document.querySelectorAll(".lazy-img");
+
+  // 2. Creamos el "Observador de Intersección"
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      // Si la imagen ya es visible en la pantalla...
+      if (entry.isIntersecting) {
+        const image = entry.target;
+        
+        // Pasamos la ruta real del 'data-src' al 'src' para que empiece a descargar
+        image.src = image.getAttribute("data-src");
+        
+        // Cuando termine de cargar la imagen en memoria, activamos la animación de CSS
+        image.onload = () => {
+          image.classList.add("loaded");
+        };
+
+        // Dejamos de vigilar esta imagen porque ya cargó
+        observer.unobserve(image);
+      }
+    });
+  }, {
+    // Configuración: Empieza a cargar la imagen 200px antes de que aparezca en pantalla
+    // para que el usuario casi ni note que se estaba cargando.
+    rootMargin: "0px 0px 200px 0px" 
+  });
+
+  // 3. Activamos el observador para cada una de las imágenes
+  lazyImages.forEach((image) => imageObserver.observe(image));
+});
