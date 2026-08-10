@@ -11,13 +11,11 @@
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-
-html {/* Habilita el desplazamiento suave para anclas internas */
-  scroll-behavior: smooth;/* Habilita el desplazamiento suave para anclas internas */
+html {
+  /* Habilita el desplazamiento suave para anclas internas */
+  scroll-behavior: smooth; /* Habilita el desplazamiento suave para anclas internas */
   scroll-padding-top: 80px; /* Ajusta según la altura de tu navbar */
 }
-
 
 /* RESET BÁSICO */
 * {
@@ -133,64 +131,67 @@ body {
   font-style: italic;
   font-weight: 400;
 }
-.btn-primary {/* Botón de llamada a la acción con estilo moderno y elegante */
-  display: inline-block;/* Asegura que el botón se comporte como un bloque en línea para poder aplicar padding y margin correctamente */
-  text-decoration: none;/* Elimina el subrayado predeterminado de los enlaces */
-  text-align: center;/* Centra el texto dentro del botón */
+.btn-primary {
+  /* Botón de llamada a la acción con estilo moderno y elegante */
+  display: inline-block; /* Asegura que el botón se comporte como un bloque en línea para poder aplicar padding y margin correctamente */
+  text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+  text-align: center; /* Centra el texto dentro del botón */
   background: var(--primary);
   color: #d4d4d4;
-  border: none;/* Elimina el borde predeterminado del botón */
-  padding: 15px 40px;/* Aumenta el padding para un botón más grande y llamativo */
-  font-weight: 700;/* Aumenta el peso de la fuente para que el texto del botón sea más prominente */
-  letter-spacing: 2px;/* Aumenta el espaciado entre letras para un efecto más elegante y moderno */
-  cursor: pointer;/* Cambia el cursor al pasar sobre el botón para indicar interactividad */
-  transition: var(--transition);/* Añade una transición suave para los cambios de estado del botón */
+  border: none; /* Elimina el borde predeterminado del botón */
+  padding: 15px 40px; /* Aumenta el padding para un botón más grande y llamativo */
+  font-weight: 700; /* Aumenta el peso de la fuente para que el texto del botón sea más prominente */
+  letter-spacing: 2px; /* Aumenta el espaciado entre letras para un efecto más elegante y moderno */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón para indicar interactividad */
+  transition: var(
+    --transition
+  ); /* Añade una transición suave para los cambios de estado del botón */
   border-radius: 12px; /* Cambiado a un radio sutil de lujo en lugar de 15% */
 }
 
 /* --- ANIMACIONES DE INTERACCIÓN --- */
 
 /* Cuando el usuario pasa el cursor encima (Hover) */
-.btn-primary:hover {/* Efecto de hover para mejorar la experiencia del usuario y dar retroalimentación visual */
+.btn-primary:hover {
+  /* Efecto de hover para mejorar la experiencia del usuario y dar retroalimentación visual */
   background: #000;
-  transform: scale(1.05);/* Aumenta ligeramente el tamaño del botón para un efecto de "pop" */
+  transform: scale(
+    1.05
+  ); /* Aumenta ligeramente el tamaño del botón para un efecto de "pop" */
   /* transform: translateY(-3px); */ /* Desplaza el botón hacia arriba para un efecto de elevación */
   /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); */ /* Añade una sombra sutil para dar la sensación d
   e que el botón está flotando */
 }
 
-.btn-primary:active {/* Efecto de clic para dar retroalimentación inmediata al usuario */
-  transform: translateY(3px) scale(0.98);/* Desplaza el botón hacia abajo para simular un efecto de "presión" */
+.btn-primary:active {
+  /* Efecto de clic para dar retroalimentación inmediata al usuario */
+  transform: translateY(3px) scale(0.98); /* Desplaza el botón hacia abajo para simular un efecto de "presión" */
 }
-
-
-
 
 /* BENTO GRID RESPONSIVE (Inicio / Categorías) */
 .section-container {
-  padding: 40px 5%;/* Espaciado generoso para un diseño más aireado */
-  max-width: 1400px;/* Ancho máximo para mantener el contenido centrado y evitar que se extienda demasiado en pantallas grandes */
-  margin: 0 auto;/* Centra el contenido horizontalmente */
+  padding: 40px 5%; /* Espaciado generoso para un diseño más aireado */
+  max-width: 1400px; /* Ancho máximo para mantener el contenido centrado y evitar que se extienda demasiado en pantallas grandes */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
 }
 .bento-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;/* Espacio entre filas para evitar que los elementos se vean amontonados */
+  gap: 30px; /* Espacio entre filas para evitar que los elementos se vean amontonados */
 }
-.bento-item{
+.bento-item {
   position: relative;
   overflow: hidden;
   height: 400px;
   margin-top: 30px;
 }
 
-.bento-item{
+.bento-item {
   position: relative;
   overflow: hidden;
   height: 400px;
   margin-top: 30px;
 }
-
 
 .bento-item img {
   width: 100%;
@@ -222,10 +223,11 @@ body {
 /* ==========================================================================
    NUEVA SECCIÓN DE FRAGANCIAS (Alineada con Captura de pantalla 2026-06-12)
    ========================================================================== */
-.section-container-fragancias { /* Nuevo contenedor específico para la sección de fragancias con un poco más de espacio vertical para dar un respiro visual entre secciones */
-  padding: 60px 5%;/* Aumenta el padding vertical para dar más espacio entre secciones y evitar que se vean amontonadas */
-  max-width: 1400px;/* Mantiene el contenido centrado y evita que se extienda demasiado en pantallas grandes */
-  margin: 0 auto;/* Centra el contenido horizontalmente */
+.section-container-fragancias {
+  /* Nuevo contenedor específico para la sección de fragancias con un poco más de espacio vertical para dar un respiro visual entre secciones */
+  padding: 60px 5%; /* Aumenta el padding vertical para dar más espacio entre secciones y evitar que se vean amontonadas */
+  max-width: 1400px; /* Mantiene el contenido centrado y evita que se extienda demasiado en pantallas grandes */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
 }
 
 /* Cuadrícula limpia y moderna sin carrusel */
@@ -245,10 +247,10 @@ body {
 /* Contenedor de imagen con fondo suave para resaltar el producto */
 .product-img-box {
   background-color: #f3f4f6; /* Fondo gris claro limpio */
-  aspect-ratio: 3 / 4;      /* Proporción estilizada de catálogo de lujo */
+  aspect-ratio: 3 / 4; /* Proporción estilizada de catálogo de lujo */
   overflow: hidden;
   border-radius: 6px;
-  margin-bottom: 15px;      /* Despega la imagen de los textos inferiores */
+  margin-bottom: 15px; /* Despega la imagen de los textos inferiores */
 }
 
 .product-img-box img {
@@ -351,15 +353,16 @@ body {
 @media (min-width: 992px) {
   .bento-grid {
     grid-template-columns: 1fr 1fr; /* 2 columnas iguales para un diseño más equilibrado */
-     gap: 30px; /* Aumenta el espacio entre columnas para un diseño más aireado */
+    gap: 30px; /* Aumenta el espacio entre columnas para un diseño más aireado */
   }
-  .bento-stack {/* Cambia a flex para apilar los elementos verticalmente con espacio entre ellos */
+  .bento-stack {
+    /* Cambia a flex para apilar los elementos verticalmente con espacio entre ellos */
     display: flex;
     flex-direction: column;
-    gap: 30px;/* Espacio entre los elementos apilados para evitar que se vean amontonados */
+    gap: 30px; /* Espacio entre los elementos apilados para evitar que se vean amontonados */
   }
-  .bento-item{
-    height: 45%;/* Reduce un poco la altura para dar más espacio a los textos y evitar que las imágenes se vean demasiado grandes en pantallas grandes */
+  .bento-item {
+    height: 45%; /* Reduce un poco la altura para dar más espacio a los textos y evitar que las imágenes se vean demasiado grandes en pantallas grandes */
   }
   /* En pantallas de escritorio, se activan las 3 columnas simétricas como en tu referencia */
   .bento-grid-fragancias {
@@ -368,12 +371,10 @@ body {
   }
 }
 
-
-
 /*--------------------------------------------------------------------------------------------------------------*/
 @media (min-width: 992px) {
   .bento-grid2 {
-    grid-template-columns: 1fr 1fr;/** 2 columnas con proporción 60/40 para un diseño más dinámico */
+    grid-template-columns: 1fr 1fr; /** 2 columnas con proporción 60/40 para un diseño más dinámico */
   }
   .bento-stack2 {
     display: flex;
@@ -384,11 +385,6 @@ body {
     height: 85%;
   }
 }
-
-
-
-
-
 
 /* Celulares Menú */
 @media (max-width: 600px) {
@@ -443,7 +439,6 @@ body {
   overflow-x: auto;
   scroll-behavior: smooth;
   padding-bottom: 20px;
-  
 }
 .product-slider::-webkit-scrollbar {
   display: none;
@@ -490,9 +485,6 @@ body {
     display: none;
   }
 }
-
-
-
 
 /* --- STORY SECTION --- */
 .story-section {
@@ -603,13 +595,14 @@ body {
   }
 }
 
-
-                  /* --- ANIMACIÓN DE CARGA DE IMÁGENES (Lazy Loading) --- */
+/* --- ANIMACIÓN DE CARGA DE IMÁGENES (Lazy Loading) --- */
 /* Estado inicial: la imagen está oculta y un poco abajo */
 .lazy-img {
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
 }
 /* Estado final: cuando el usuario llega a ella, se hace visible y sube a su posición real */
 .lazy-img.loaded {
