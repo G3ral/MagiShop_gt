@@ -372,7 +372,7 @@ body {
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
-@media (min-width: 992px) {
+@media (min-width: 992px) {/* Pantallas grandes y Laptops */
   .bento-grid2 {
     grid-template-columns: 1fr 1fr; /** 2 columnas con proporción 60/40 para un diseño más dinámico */
   }
@@ -387,7 +387,7 @@ body {
 }
 
 /* Celulares Menú */
-@media (max-width: 600px) {
+@media (max-width: 640px) {/* Ajustes para pantallas pequeñas */ 
   .nav-menu {
     position: fixed;
     top: 70px;
